@@ -19,10 +19,10 @@ public class OnChrome {
 	
 	@Test
 	public void getTitle() throws MalformedURLException ,SocketTimeoutException {
-		//ChromeOptions options=new ChromeOptions();
-		//ChromeOptions.addArguments("--remote-allow-origins=*");
+		ChromeOptions options=new ChromeOptions();
+		ChromeOptions.addArguments("--remote-allow-origins=*");
 		System.setProperty("webdriver.chrome.driver", "C:\\BrowserDriver\\chromedriver.exe");
-		 WebDriver driver=new ChromeDriver();
+		 WebDriver driver=new ChromeDriver(options);
 		DesiredCapabilities caps=new DesiredCapabilities();
 		
 		caps.setCapability(CapabilityType.BROWSER_NAME, "chrome");
